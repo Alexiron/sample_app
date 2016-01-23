@@ -15,14 +15,15 @@ group :development, :test do
   gem 'rspec-rails', '3.3.2'
   # The following optional lines are part of the advanced setup.
   gem 'guard-rspec', '4.6.0'
-  gem 'spork-rails', '4.0.0'
-  gem 'guard-spork', '1.5.0'
+  #gem 'spork', github: 'sporkrb/spork'
+  #gem 'spork-rails', '4.0.0'
+  #gem 'guard-spork', '2.1.0'#'1.5.0'
   gem 'childprocess', '0.3.6'
 end
 
 group :test do
   gem 'selenium-webdriver', '2.35.1'
-  gem 'capybara', '2.1.0'
+  gem 'capybara', '2.2.0'
   gem 'factory_girl_rails', '4.2.0'
   gem 'cucumber-rails', '1.4.0', :require => false
   gem 'database_cleaner', github: 'bmabey/database_cleaner'

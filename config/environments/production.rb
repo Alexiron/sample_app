@@ -76,4 +76,6 @@ SampleApp::Application.configure do
 
   # Do not dump schema after migrations.
   # config.active_record.dump_schema_after_migration = false
+
+  config.assets.precompile += %w(*.png *.jpg *.jpeg *.gif *.css) #not exist by default
 end

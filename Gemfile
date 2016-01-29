@@ -16,6 +16,7 @@ gem 'thin'
 group :development, :test do
   # gem 'sqlite3', '1.3.8'
   gem 'rspec-rails', '3.3.2'
+  gem 'rspec-its'
   # The following optional lines are part of the advanced setup.
   gem 'guard-rspec', '4.6.0'
   #gem 'spork', github: 'sporkrb/spork'

@@ -1,9 +1,8 @@
 SampleApp::Application.routes.draw do
 
-  resources :users, except: [:new]#, :create]
-  #post 'users' => 'users#create', as: :create_users
-
-  resources :sessions, only: [:new, :create, :destroy]
+  resources :users, except:    [:new]
+  resources :sessions, only:   [:new, :create, :destroy]
+  resources :microposts, only: [:create, :destroy]
   #get 'user/:id' => 'users#show', as: :user
   #post 'user/:id/create' => 'users#create'
 

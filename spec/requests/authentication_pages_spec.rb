@@ -145,6 +145,13 @@ describe "Authentication" do
         before { patch user_path(wrong_user) }
         specify { expect(response).to redirect_to(root_path) }
       end
+
+      describe "microposts" do
+        let!(:m1) {FactoryGirl.create(:micropost, user: wrong_user, content: 'Lorem Ipsum') }
+        before { visit user_path(wrong_user) }
+
+        specify { expect(page).not_to have_link('delete', href: micropost_path(m1)) }
+      end
     end
 
     describe "as non-admin user" do

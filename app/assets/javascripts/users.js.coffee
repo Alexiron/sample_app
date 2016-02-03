@@ -2,4 +2,6 @@
 # All this logic will automatically be available in application.js.
 # You can use CoffeeScript in this file: http://coffeescript.org/
 jQuery ->
-  $('.dropdown-toggle').dropdown()
+
+  # Try this, if dropdown menu stop working
+  # $('.dropdown-toggle').dropdown()

@@ -1,8 +1,13 @@
 SampleApp::Application.routes.draw do
 
-  resources :users, except:    [:new]
-  resources :sessions, only:   [:new, :create, :destroy]
-  resources :microposts, only: [:create, :destroy]
+  resources :users, except:    [:new] do
+    member do
+      get :following, :followers
+    end
+  end
+  resources :sessions, only:      [:new, :create, :destroy]
+  resources :microposts, only:    [:create, :destroy]
+  resources :relationships, only: [:create, :destroy]
   #get 'user/:id' => 'users#show', as: :user
   #post 'user/:id/create' => 'users#create'
 
